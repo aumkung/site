@@ -1,14 +1,43 @@
 
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
-
+@import url('https://fonts.googleapis.com/css?family=Kanit:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=thai');
 // Variables
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
+
+// Circus
+
+@import '../../../node_modules/cirrus-ui/dist/cirrus.min.css';
+
+$font-main: 'Kanit', sans-serif;
+$main-color: #F8D174;
 
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+#app {
+  .home {
+    max-width: 1200px;
+    margin: 0 auto;
+    .header {
+      &-title {
+        font-family: $font-main;
+        text-align: center;
+      }
+    }
+  } 
+  .footer {
+    font-family: $font-main;
+    height: 52px;
+    line-height: 52px;
+    background-color: $main-color;
+    &-text {
+      font-weight: 300;
+      text-align: center;
+    }
+  }
 }
